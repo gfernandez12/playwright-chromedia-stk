@@ -18,16 +18,7 @@ test.describe.serial('Login Scenario Staging', () => {
     commonresource = new commonResources(page);
     loginPageAssertions = new LoginPageAssertions(page);
 
-    // page.on('console', msg => console.log('PAGE LOG:', msg.text()));
-    // page.on('pageerror', error => console.log('PAGE ERROR:', error.message));
-
-    // await page.goto('https://strak-stage.chromedia.net/login', {
-    //   waitUntil: 'networkidle',
-    //   timeout: 30000
-    // });
-
     await commonresource.navigateTo('https://strak-stage.chromedia.net/login');
-
   });
 
   test('Login to Smart Trak app', async ({ page }) => {

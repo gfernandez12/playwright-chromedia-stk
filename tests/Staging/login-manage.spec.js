@@ -22,7 +22,6 @@ test.describe.serial('Login Scenario Staging', () => {
     page.on('pageerror', error => console.log('PAGE ERROR:', error.message));
 
     await commonresource.navigateTo('https://strak-stage.chromedia.net/manage/login');
-
   });
 
   test('Login to Smart Trak app', async ({ page }) => {
