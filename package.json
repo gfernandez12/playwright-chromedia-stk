@@ -1,14 +1,24 @@
 {
   "name": "playwright-chromedia-stk",
   "version": "1.0.0",
-  "description": "",
+  "description": "Playwright E2E test suite for Smart Trak (Chromedia Staging)",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test",
+    "test:staging": "playwright test tests/Staging",
+    "test:chromium": "playwright test --project=chromium",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report",
+    "install:browsers": "playwright install --with-deps"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
-    "@playwright/test": "^1.58.2"
+    "@playwright/test": "^1.58.2",
+    "dotenv": "^16.4.5"
   }
 }
