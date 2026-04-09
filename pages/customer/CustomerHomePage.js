@@ -1,7 +1,4 @@
-import fs from 'fs/promises';
-import path from 'path';
-
-export class HomePage {
+export class CustomerHomePage {
   /** @param {import('@playwright/test').Page} page */
   constructor(page) {
     this.page = page;
@@ -16,5 +13,3 @@ export class HomePage {
     }
   }
 }
-
-// export default LoginPage;
