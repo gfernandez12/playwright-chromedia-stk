@@ -17,6 +17,7 @@ export default defineConfig({
     : [['list'], ['html', { open: 'on-failure' }]],
 
   use: {
+    baseURL: process.env.BASE_URL || process.env.STAGING_URL || 'https://strak-stage.chromedia.net',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'on-first-retry',

@@ -8,8 +8,9 @@ config(); // fallback to .env for local dev
 
 export default defineConfig({
   ...baseConfig,
+  testDir: '../tests',
   use: {
     ...baseConfig.use,
-    baseURL: process.env.STAGING_URL || 'https://strak-stage.chromedia.net',
+    baseURL: process.env.STAGING_URL || 'https://strak-stage.chromedia.net/manage/login',
   },
 });
