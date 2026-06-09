@@ -1,19 +1,13 @@
-import fs from 'fs/promises';
-import path from 'path';
+import { BasePage } from '../BasePage.js';
 
-export class AdminAccountsHomePage {
+export class AdminAccountsHomePage extends BasePage {
   /** @param {import('@playwright/test').Page} page */
   constructor(page) {
-    this.page = page;
+    super(page);
     this.accountsSideBarLink = page.locator('span.tab-name', { hasText: 'Accounts' });
-    this.addAccountButton = page.getByRole('button', { name: 'Add Account' })
   }
 
   async navigateToAccountsPage() {
-    try {
-      await this.accountsSideBarLink.click();
-    } catch (error) {
-      throw new Error(`Cannot navigate to Accounts page: ${error.message}`);
-    }
+    await this.accountsSideBarLink.click();
   }
 }
