@@ -25,6 +25,11 @@ export default defineConfig({
 
   use: {
     baseURL: BASE_URL,
+    /* HTTP Basic Auth gate in front of the staging environment */
+    httpCredentials: {
+      username: process.env.BASIC_AUTH_USERNAME || 'strak',
+      password: process.env.BASIC_AUTH_PASSWORD || 'strak123',
+    },
     /* Collect trace when retrying the failed test */
     trace: 'on-first-retry',
     /* Capture screenshot on failure */
